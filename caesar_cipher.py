@@ -56,6 +56,12 @@ elif ende == "decode":
                     shifted = (number - shifts) % 26 + offset
                     letter = chr(shifted)
                     result += letter
+                elif char.islower():
+                     offset = 97
+                     number = ord(char) - offset
+                     shifted = (number - shifts) % 26 + offset
+                     letter = chr(shifted)
+                     result += letter
             else:
                 result += char
 
